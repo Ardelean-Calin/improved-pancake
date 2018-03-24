@@ -1,7 +1,7 @@
 {
   "root": true,
-  "extends": [
-    "plugin:vue/essential",
-    "@vue/prettier"
-  ]
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "extends": ["plugin:vue/essential", "@vue/prettier"]
 }
