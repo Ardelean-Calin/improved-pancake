@@ -29,7 +29,6 @@
 </template>
 
 <script>
-import firebase from "firebase/app";
 import NewsCard from "@/components/NewsCard.vue";
 import MiniCard from "@/components/MiniCard.vue";
 
@@ -38,33 +37,15 @@ export default {
     NewsCard,
     MiniCard
   },
-  data() {
-    return {
-      toReview: []
-    };
-  },
   computed: {
     reviewBadge() {
-      return this.toReview.length;
+      // Get total number of notifications by summing the number of
+      // notifications for each subject.
+      return Object.values(this.$store.getters.notifications).reduce(
+        (acc, curr) => acc + curr,
+        0
+      );
     }
-  },
-  created() {
-    firebase.auth().onAuthStateChanged(user => {
-      this.userID = user.uid;
-      firebase
-        .database()
-        .ref("/users/" + this.userID)
-        .on("value", snapshot => {
-          const toReview = [];
-          snapshot.child("toReview").forEach(snap => {
-            if (snap.val()) {
-              toReview.push(snap.key);
-            }
-          });
-          this.toReview = toReview;
-          this.$forceUpdate();
-        });
-    });
   }
 };
 </script>

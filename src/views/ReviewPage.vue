@@ -61,7 +61,6 @@
 </template>
 
 <script>
-import firebase from "firebase/app";
 import StarRating from "@/components/StarRating.vue";
 
 export default {
@@ -70,20 +69,26 @@ export default {
   },
   computed: {
     canSubmit() {
-      return (
-        Object.keys(this.questions).reduce((prev, curr) => {
-          return prev && this.answers.hasOwnProperty(curr);
-        }, true) && this.userID
-      );
+      return Object.keys(this.questions).reduce((prev, curr) => {
+        return prev && this.answers.hasOwnProperty(curr);
+      }, true);
+    },
+    item() {
+      return this.$store.getters.items[this.$route.params.id][
+        this.$route.params.itemID
+      ];
+    },
+    questions() {
+      return Object.keys(this.item.questions).reduce((prev, key) => {
+        prev[key] = this.$store.state.questions[key];
+        return prev;
+      }, {});
     }
   },
   data() {
     return {
-      item: {},
-      questions: {},
       answers: {},
       additionalComment: "",
-      userID: null,
       dialog: false
     };
   },
@@ -91,51 +96,17 @@ export default {
     submitReview() {
       this.dialog = false;
 
-      // Upload to-review
-      firebase
-        .database()
-        .ref("users/" + this.userID + "/toReview/" + this.$route.params.itemID)
-        .set(false);
+      const fullAnswer = {
+        ...this.answers,
+        additionalComment: this.additionalComment
+      };
 
-      // Upload review
-      firebase
-        .database()
-        .ref(`answers/${this.$route.params.itemID}/` + this.userID)
-        .set({ ...this.answers, additionalComment: this.additionalComment })
-        .then(() => {
-          this.$router.back();
-        });
+      this.$store.dispatch("uploadReview", {
+        itemID: this.$route.params.itemID,
+        answer: fullAnswer
+      });
+      this.$router.back();
     }
-  },
-  created() {
-    firebase
-      .database()
-      .ref(
-        "discipline/" +
-          this.$route.params.id +
-          "/" +
-          this.$route.params.location +
-          "/" +
-          this.$route.params.itemID
-      )
-      .on("value", snapshot => {
-        this.item = snapshot.val();
-      });
-
-    firebase
-      .database()
-      .ref(
-        this.$route.params.location == "cursuri"
-          ? "questionsCourses"
-          : "questionsLaboratory"
-      )
-      .on("value", snapshot => {
-        this.questions = snapshot.val();
-      });
-
-    firebase.auth().onAuthStateChanged(user => {
-      this.userID = user.uid;
-    });
   }
 };
 </script>

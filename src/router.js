@@ -32,7 +32,7 @@ export default new Router({
           component: SubjectPage
         },
         {
-          path: "subjects/:id/:location/:itemID",
+          path: "subjects/:id/:itemID",
           component: ReviewPage
         },
         { path: "signup", component: SignupPage },

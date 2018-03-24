@@ -1,11 +1,11 @@
 <template>
   <v-card flat>
     <v-card-media 
-      :src="imgSrc" 
+      :src="subject.imageURL" 
       height="200px"/>
     <v-card-title primary-title>
       <div>
-        <h3 class="headline"> {{ title }}</h3>
+        <h3 class="headline"> {{ subject.titlu }}</h3>
         <div 
           class="description" 
           @click="showDescription = !showDescription">
@@ -21,7 +21,7 @@
           <div 
             :class="{'description-text-expanded': showDescription}" 
             class="description-text">
-            {{ description }}
+            {{ subject.descriere }}
           </div>
         </div>
       </div>
@@ -49,7 +49,6 @@
 </template>
 
 <script>
-import firebase from "firebase/app";
 import SubjectPageReviewCard from "@/components/SubjectPageReviewCard.vue";
 
 export default {
@@ -58,75 +57,34 @@ export default {
   },
   data() {
     return {
-      title: "",
-      description: "",
-      imgSrc: "",
-      subject: {},
-      courses: {},
-      laboratories: {},
-      toReview: [],
-      userID: null,
       showDescription: false
     };
   },
   computed: {
     reviews() {
+      // Create some simple objects to store icon and router link
       const reviewObjects = this.toReview.reduce((accumulator, objectID) => {
-        if (Object.keys(this.courses || {}).includes(objectID)) {
-          accumulator.push({
-            ...this.courses[objectID],
-            icon: "book",
-            linkTo: "cursuri/" + objectID
-          });
-        } else if (Object.keys(this.laboratories || {}).includes(objectID)) {
-          accumulator.push({
-            ...this.laboratories[objectID],
-            icon: "build",
-            linkTo: "laboratoare/" + objectID
-          });
-        }
+        accumulator.push({
+          ...this.subject.iteme[objectID],
+          icon: this.subject.iteme[objectID].type == "curs" ? "book" : "build",
+          linkTo: objectID
+        });
         return accumulator;
       }, []);
       return reviewObjects;
-    }
-  },
-  watch: {
-    subject: {
-      handler(val) {
-        this.title = val.titlu;
-        this.description = val.descriere;
-        this.imgSrc = val.imageURL;
-
-        this.courses = val.cursuri;
-        this.laboratories = val.laboratoare;
-      },
-      deep: true
-    }
-  },
-  created() {
-    firebase
-      .database()
-      .ref("/discipline/" + this.$route.params.id)
-      .on("value", snapshot => {
-        this.subject = snapshot.val();
+    },
+    subject() {
+      return this.$store.state.subjects[this.$route.params.id];
+    },
+    toReview() {
+      return Object.keys(this.$store.state.toReview).filter(key => {
+        return (
+          // Filter the entries which belong to this subject and need to be
+          // reviewed.
+          this.$store.state.toReview[key] && this.subject.iteme[key]
+        );
       });
-
-    firebase.auth().onAuthStateChanged(user => {
-      this.userID = user.uid;
-      firebase
-        .database()
-        .ref("/users/" + this.userID)
-        .on("value", snapshot => {
-          const toReview = [];
-          snapshot.child("toReview").forEach(snap => {
-            if (snap.val()) {
-              toReview.push(snap.key);
-            }
-          });
-          this.toReview = toReview;
-          this.$forceUpdate();
-        });
-    });
+    }
   }
 };
 </script>

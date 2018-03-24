@@ -18,24 +18,7 @@
 
 <script>
 export default {
-  props: {
-    title: {
-      type: String,
-      default: ""
-    },
-    imgSrc: {
-      type: String,
-      default: ""
-    },
-    badge: {
-      type: Number,
-      default: 0
-    },
-    to: {
-      type: String,
-      default: "/subjects"
-    }
-  },
+  props: ["title", "imgSrc", "badge", "to"],
   computed: {
     showBadge() {
       return this.$props.badge > 0;

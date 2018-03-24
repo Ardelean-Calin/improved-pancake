@@ -26,21 +26,21 @@
       <v-card-text 
         v-if="!editMode" 
         class="news-card-text">
-        {{ newsText }}
+        {{ news.text }}
       </v-card-text>
       <v-card-actions class="card-action-buttons"> 
         <div class="footer-div">
           <div 
             v-if="!editMode" 
-            class="author">{{ newsAuthor }}</div>
+            class="author">{{ news.author }}</div>
           <div 
             v-if="!editMode" 
-            class="postdate">{{ newsDate }} </div>
+            class="postdate">{{ formatDate(news.date) }} </div>
         </div>      
         <v-spacer/>
         <v-btn 
           v-if="editMode"
-          :disabled="newsEditedText.length > 140 || newsEditedText.length == 0"
+          :disabled="newNewsText.length > 140 || newNewsText.length == 0"
           icon
           @click="showDialog = true">
           <v-icon>check</v-icon>
@@ -83,55 +83,41 @@
 </template>
 
 <script>
-import firebase from "firebase/app";
-
 export default {
   data() {
     return {
       editMode: false,
       showDialog: false,
-      newsText: "",
-      newsAuthor: "",
-      date: "",
       editText: ""
     };
   },
   computed: {
-    newsEditedText() {
+    news() {
+      return this.$store.state.news;
+    },
+    newNewsText() {
       return this.editText || "";
     },
-    newsDate() {
-      return new Date(this.date).toLocaleString("ro-RO", {
+    user() {
+      return this.$store.state.user;
+    }
+  },
+  methods: {
+    formatDate(date) {
+      return new Date(date).toLocaleString("ro-RO", {
         day: "2-digit",
         month: "short",
         year: "numeric",
         hour: "2-digit",
         minute: "2-digit"
       });
-    }
-  },
-  created() {
-    firebase
-      .database()
-      .ref("/news")
-      .on("value", snapshot => {
-        const newsItem = snapshot.val();
-        this.newsAuthor = newsItem.author;
-        this.newsText = newsItem.text;
-        this.date = newsItem.date;
-      });
-  },
-  methods: {
+    },
     submitNews() {
-      const user = firebase.auth().currentUser;
-      firebase
-        .database()
-        .ref("/news")
-        .set({
-          author: user.displayName,
-          date: new Date().toString(),
-          text: this.newsEditedText
-        });
+      this.$store.dispatch("updateNews", {
+        author: this.user.displayName || "Anonymous",
+        date: new Date().toString(),
+        text: this.newNewsText
+      });
       this.showDialog = false;
       this.editMode = false;
     }

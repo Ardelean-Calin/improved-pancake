@@ -21,16 +21,30 @@ import "./registerServiceWorker";
 // Add user observer
 firebase.auth().onAuthStateChanged(user => {
   store.commit("setUser", user);
+  store.dispatch("getToReview");
 });
 
 // Add database observers
+// Load all subjects
 firebase
   .database()
   .ref("discipline/")
   .on("value", snapshot => {
-    if (snapshot) {
-      store.commit("setSubjects", snapshot.val());
-    }
+    store.commit("setSubjects", snapshot.val());
+  });
+// Load all questions
+firebase
+  .database()
+  .ref("questions/")
+  .on("value", snapshot => {
+    store.commit("setQuestions", snapshot.val());
+  });
+// Load news feed
+firebase
+  .database()
+  .ref("news/")
+  .on("value", snapshot => {
+    store.commit("setNews", snapshot.val());
   });
 
 Vue.config.productionTip = false;
