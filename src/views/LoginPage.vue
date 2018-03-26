@@ -1,137 +1,60 @@
 <template>
-  <div class="main-container">
-    <div class="header primary">
-      <v-icon 
-        size="6rem" 
-        dark>lock_open</v-icon>
-      <h1 class="title">Autentificare</h1>
-    </div>
-    <div class="form-container">
-      <v-form class="login-form">
-        <v-text-field  
-          v-model="email"
-          :error-messages="errorMessageEmail"
-          label="E-mail"
-          @input="errorMessageEmail = []"
-        />
-        <v-text-field 
-          v-model="password"
-          :append-icon="passVisible ? 'visibility_off' : 'visibility'" 
-          :append-icon-cb="() => (passVisible = !passVisible)" 
-          :type="passVisible ? 'text' : 'password'" 
-          :error-messages="errorMessagePassword"
-          label="Parolă" 
-          @input="errorMessagePassword = []"/>
-      </v-form>
-      <v-btn 
-        :disabled="!validInput"
-        class="primary btn" 
-        @click="signIn" 
-      >Autentifică-te</v-btn>
-      <router-link 
-        to="/signup" 
-        class="router-link">Nu ai cont? Inregistrează-te</router-link>
-    </div>
+  <div class="mainContainer">
+    <v-card class="loginCard">
+      <v-card-text class="loginForm">
+        <div class="loginText headline text-xs-center">Autentificare</div>
+        <v-text-field placeholder="E-mail..." prepend-icon="email"/>
+        <v-text-field placeholder="Parolă..." prepend-icon="lock"
+          :append-icon="passIcon" :append-icon-cb="() => passVisible = !passVisible"
+          :type="passVisible ? 'text' : 'password'"/>
+        <v-btn class="loginBtn" color="primary" block>Autentificare</v-btn>
+        <div class="createAccount">Nu ai cont? 
+          <router-link to="/signup">Înregistrează-te</router-link>
+        </div>
+      </v-card-text>
+    </v-card>
   </div>
 </template>
 
 <script>
-import firebase from "firebase/app";
-
-const minPassLength = 8;
-
 export default {
   data() {
     return {
-      passVisible: false,
-      email: "",
-      password: "",
-      errorMessageEmail: [],
-      errorMessagePassword: []
+      passVisible: false
     };
   },
   computed: {
-    validInput() {
-      return this.email.length > 0 && this.password.length >= minPassLength;
-    }
-  },
-  methods: {
-    signIn() {
-      firebase
-        .auth()
-        .signInWithEmailAndPassword(this.email, this.password)
-        .catch(err => {
-          switch (err.code) {
-            case "auth/user-not-found":
-              this.errorMessageEmail = "Acest e-mail nu există";
-              break;
-            case "auth/wrong-password":
-              this.errorMessagePassword = "Parolă greșită";
-              break;
-            case "auth/invalid-email":
-              this.errorMessageEmail = "Adresă formatată greșit";
-              break;
-            default:
-              break;
-          }
-        })
-        .then(user => {
-          // User is undefined if login failed.
-          if (user) {
-            this.$router.push("/");
-          }
-        });
+    passIcon() {
+      return this.passVisible ? "visibility_off" : "visibility";
     }
   }
 };
 </script>
 
 <style scoped>
-.btn {
-  width: 100%;
-}
-
-.form-container {
+.mainContainer {
+  height: 100%;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 75%;
-  max-width: 20rem;
-}
-
-.header {
-  height: 10rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
 }
 
-.login-form {
+.loginCard {
   width: 100%;
-  padding: 1.5rem 0;
 }
 
-.main-container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  background: white;
+.loginText {
+  margin-bottom: 0.5rem;
 }
 
-.router-link {
-  padding: 0.5rem 0;
-  text-decoration: none;
+.loginBtn {
+  margin-top: 1rem;
 }
 
-.title {
-  width: 100%;
-  font-size: 2.3rem;
+.createAccount {
+  margin-top: 1rem;
   text-align: center;
-  color: white;
-  letter-spacing: 0.1px;
-  font-weight: 400;
 }
 </style>
