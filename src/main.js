@@ -21,7 +21,9 @@ import "./registerServiceWorker";
 // Add user observer
 firebase.auth().onAuthStateChanged(user => {
   store.commit("setUser", user);
-  store.dispatch("dispatchAllActions");
+  if (user) {
+    store.dispatch("dispatchAllActions");
+  }
 });
 
 Vue.config.productionTip = false;
