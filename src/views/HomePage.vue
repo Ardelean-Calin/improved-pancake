@@ -1,6 +1,7 @@
 <template>
   <div>
-    <news-card/>
+    <news-card v-if="signedIn"/>
+    <current-status v-else />
     <v-container 
       fluid
       grid-list-lg >
@@ -19,7 +20,7 @@
         <v-flex 
           xs6>
           <mini-card 
-            to="/shedule" 
+            to="/schedule" 
             text="Orar"
             icon="date_range"/>
         </v-flex>
@@ -31,13 +32,18 @@
 <script>
 import NewsCard from "@/components/NewsCard.vue";
 import MiniCard from "@/components/MiniCard.vue";
+import CurrentStatus from "@/components/CurrentStatus.vue";
 
 export default {
   components: {
     NewsCard,
-    MiniCard
+    MiniCard,
+    CurrentStatus
   },
   computed: {
+    signedIn() {
+      return this.$store.state.user ? true : false;
+    },
     reviewBadge() {
       // Get total number of notifications by summing the number of
       // notifications for each subject.

@@ -22,18 +22,22 @@ export default new Vuex.Store({
     },
     notifications: (state, getters) => {
       const toReview = state.toReview;
-      const notifications = Object.entries(getters.items).reduce(
-        // We verify how many of each key have a true value assigned to them
-        (prev, [subjectID, items]) => {
-          prev[subjectID] = Object.keys(items).reduce((previous, curr) => {
-            if (toReview[curr]) return previous + 1;
-            else return previous;
-          }, 0);
-          return prev;
-        },
-        {}
-      );
-      return notifications;
+      if (toReview && getters.items) {
+        const notifications = Object.entries(getters.items).reduce(
+          // We verify how many of each key have a true value assigned to them
+          (prev, [subjectID, items]) => {
+            prev[subjectID] = Object.keys(items).reduce((previous, curr) => {
+              if (toReview[curr]) return previous + 1;
+              else return previous;
+            }, 0);
+            return prev;
+          },
+          {}
+        );
+        return notifications;
+      } else {
+        return 0;
+      }
     }
   },
   mutations: {
@@ -131,6 +135,21 @@ export default new Vuex.Store({
         .catch(err => {
           payload.errCallback(err);
         });
+    },
+    signIn({ commit }, payload) {
+      firebase
+        .auth()
+        .signInWithEmailAndPassword(payload.email, payload.password)
+        .then(user => {
+          commit("setUser", user);
+          payload.sucCallback();
+        })
+        .catch(err => {
+          payload.errCallback(err);
+        });
+    },
+    signOut() {
+      firebase.auth().signOut();
     }
   }
 });

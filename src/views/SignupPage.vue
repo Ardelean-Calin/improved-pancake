@@ -27,9 +27,9 @@ export default {
       passVisible: false,
       fullName: null,
       fullNameErr: [],
-      email: null,
+      email: "",
       emailErr: [],
-      password: null,
+      password: "",
       passwordErr: []
     };
   },
@@ -44,14 +44,7 @@ export default {
         this.fullNameErr = ["Numele nu poate fi lăsat gol."];
         return;
       }
-      if (!this.email) {
-        this.emailErr = ["E-mail-ul nu poate fi lăsat gol."];
-        return;
-      }
-      if (!this.password) {
-        this.passwordErr = ["Parola nu poate fi lăsată goală."];
-        return;
-      }
+
       this.$store.dispatch("signUp", {
         email: this.email,
         password: this.password,
@@ -59,8 +52,8 @@ export default {
         sucCallback: this.successHandler
       });
     },
-    errorHandler(payload) {
-      const errCode = payload.code;
+    errorHandler(err) {
+      const errCode = err.code;
 
       switch (errCode) {
         case "auth/invalid-email":

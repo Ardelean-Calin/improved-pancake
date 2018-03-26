@@ -3,11 +3,15 @@
     <v-card class="loginCard">
       <v-card-text class="loginForm">
         <div class="loginText headline text-xs-center">Autentificare</div>
-        <v-text-field placeholder="E-mail..." prepend-icon="email"/>
-        <v-text-field placeholder="Parolă..." prepend-icon="lock"
+        <v-text-field @input="emailErr = []"
+          v-model="email" placeholder="E-mail..." prepend-icon="email" 
+          :error-messages="emailErr"/>
+        <v-text-field @input="passwordErr = []"
+          v-model="password" placeholder="Parolă..." prepend-icon="lock" 
+          :error-messages="passwordErr"
           :append-icon="passIcon" :append-icon-cb="() => passVisible = !passVisible"
           :type="passVisible ? 'text' : 'password'"/>
-        <v-btn class="loginBtn" color="primary" block>Autentificare</v-btn>
+        <v-btn @click="signIn" class="loginBtn" color="primary" block>Autentificare</v-btn>
         <div class="createAccount">Nu ai cont? 
           <router-link to="/signup">Înregistrează-te</router-link>
         </div>
@@ -20,12 +24,46 @@
 export default {
   data() {
     return {
+      email: "",
+      emailErr: [],
+      password: "",
+      passwordErr: [],
       passVisible: false
     };
   },
   computed: {
     passIcon() {
       return this.passVisible ? "visibility_off" : "visibility";
+    }
+  },
+  methods: {
+    signIn() {
+      this.$store.dispatch("signIn", {
+        email: this.email,
+        password: this.password,
+        sucCallback: this.onSuccess,
+        errCallback: this.onError
+      });
+    },
+    onSuccess() {
+      this.$router.push("/");
+      // Maybe ask for notification permissions?
+    },
+    onError(err) {
+      const code = err.code;
+      switch (code) {
+        case "auth/invalid-email":
+          this.emailErr = ["Adresă de mail formatată greșit"];
+          break;
+        case "auth/user-not-found":
+          this.emailErr = ["Adresă de mail greșită"];
+          break;
+        case "auth/wrong-password":
+          this.passwordErr = ["Parolă greșită"];
+          break;
+        default:
+          break;
+      }
     }
   }
 };

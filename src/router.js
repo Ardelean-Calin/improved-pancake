@@ -1,6 +1,8 @@
 import Vue from "vue";
 import Router from "vue-router";
 
+import store from "./store";
+
 import AppShell from "./components/AppShell.vue";
 
 // Views
@@ -14,10 +16,24 @@ import SchedulePage from "./views/SchedulePage.vue";
 
 Vue.use(Router);
 
+// Navigation guard which only allows signed-in users
+// to go to certain routes. Else redirects them to /login
+const isSignedIn = (to, from, next) => {
+  if (store.state.user) next();
+  else next("/login");
+};
+
+// Navigation guard which does not allow signed-in users
+// to go to some routes.
+const isSignedout = (to, from, next) => {
+  if (!store.state.user) next();
+  else next(false);
+};
+
 export default new Router({
   routes: [
-    { path: "/login", component: LoginPage },
-    { path: "/signup", component: SignupPage },
+    { path: "/login", component: LoginPage, beforeEnter: isSignedout },
+    { path: "/signup", component: SignupPage, beforeEnter: isSignedout },
     {
       path: "/",
       component: AppShell,
@@ -25,17 +41,20 @@ export default new Router({
         { path: "", component: HomePage },
         {
           path: "subjects",
-          component: SubjectlistPage
+          component: SubjectlistPage,
+          beforeEnter: isSignedIn
         },
         {
           path: "subjects/:id",
-          component: SubjectPage
+          component: SubjectPage,
+          beforeEnter: isSignedIn
         },
         {
           path: "subjects/:id/:itemID",
-          component: ReviewPage
+          component: ReviewPage,
+          beforeEnter: isSignedIn
         },
-        { path: "signup", component: SignupPage },
+        { path: "signup", component: SignupPage, beforeEnter: isSignedIn },
         {
           path: "schedule",
           component: SchedulePage
