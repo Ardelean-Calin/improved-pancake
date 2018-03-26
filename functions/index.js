@@ -13,23 +13,28 @@ exports.userCreated = functions.auth.user().onCreate(async event => {
     .once("value")).val();
 
   const items = Object.keys(discipline).reduce((prev, key) => {
-    prev.push(...getItems(discipline[key]));
-    return prev;
-  }, []);
-  console.log(items);
-  const toReview = items.reduce((prev, item) => {
-    prev[item] = true;
+    Object.assign(prev, getItems(discipline[key]));
     return prev;
   }, {});
-  console.log(toReview);
+
+  const toReview = Object.keys(items).reduce((prev, item) => {
+    prev[item] = items[item].dateStart < new Date().getTime();
+    return prev;
+  }, {});
+
   // Configure everything for the user.
   await firebase
     .database()
     .ref("users/" + user.uid + "/toReview")
     .set(toReview);
+  // Also save the email
+  await firebase
+    .database()
+    .ref("users/" + user.uid + "/email")
+    .set(user.email);
 });
 
 // Get the keys of every course and laboratory
 function getItems(disciplina) {
-  return Object.keys(disciplina.iteme);
+  return disciplina.iteme;
 }
