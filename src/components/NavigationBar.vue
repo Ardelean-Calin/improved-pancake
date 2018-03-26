@@ -22,6 +22,7 @@
       </div>
       <v-divider/>
       <v-list>
+        <v-list-tile class="headerTile">Navigare</v-list-tile>
         <template v-for="navlink in navigationLinks">
           <v-list-tile
             v-if="(loggedIn && navlink.showLoggedIn) || (!loggedIn && navlink.showLoggedOut)"
@@ -35,7 +36,7 @@
             </v-list-tile-content>
           </v-list-tile>
         </template>
-        <v-divider/>
+        <v-list-tile class="headerTile">Alte opțiuni</v-list-tile>
         <template v-for="navlink in actionLinks">
           <v-list-tile ripple
             v-if="(loggedIn && navlink.showLoggedIn) || (!loggedIn && navlink.showLoggedOut)"
@@ -50,13 +51,22 @@
             </v-list-tile-content>
           </v-list-tile>
         </template>
-         <v-list-tile to="/feedback">
+        <v-list-tile to="/feedback">
+          <v-list-tile-action>
+            <v-icon>feedback</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>Feedback aplicație</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile ripple @click="notifications = !notifications">
             <v-list-tile-action>
-              <v-icon>feedback</v-icon>
+              <v-icon>notifications_active</v-icon>
             </v-list-tile-action>
-            <v-list-tile-content>
-              <v-list-tile-title>Feedback aplicație</v-list-tile-title>
-            </v-list-tile-content>
+            <v-list-tile-title>Notificări</v-list-tile-title>
+            <v-list-tile-action>
+              <v-switch color="primary" v-model="notifications"></v-switch> 
+            </v-list-tile-action>
           </v-list-tile>
       </v-list>
     </v-navigation-drawer>
@@ -76,6 +86,7 @@ export default {
   data() {
     return {
       drawer: null,
+      notifications: false,
       navigationLinks: [
         {
           name: "Acasă",
@@ -151,6 +162,10 @@ export default {
   display: flex;
   flex-direction: column;
   margin-left: 0.5rem;
+}
+
+.headerTile {
+  color: hsl(0, 0%, 49%);
 }
 
 .personIcon {
