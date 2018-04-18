@@ -81,7 +81,8 @@ export default {
         return (
           // Filter the entries which belong to this subject and need to be
           // reviewed.
-          this.$store.state.toReview[key] && this.subject.iteme[key]
+          this.$store.state.toReview[key] == "assigned" &&
+          this.subject.iteme[key]
         );
       });
     }

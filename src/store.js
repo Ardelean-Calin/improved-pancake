@@ -27,7 +27,7 @@ export default new Vuex.Store({
           // We verify how many of each key have a true value assigned to them
           (prev, [subjectID, items]) => {
             prev[subjectID] = Object.keys(items).reduce((previous, curr) => {
-              if (toReview[curr]) return previous + 1;
+              if (toReview[curr] == "assigned") return previous + 1;
               else return previous;
             }, 0);
             return prev;
@@ -61,6 +61,16 @@ export default new Vuex.Store({
     }
   },
   actions: {
+    async requestToken() {
+      const messaging = firebase.messaging();
+      try {
+        await messaging.requestPermission();
+        const token = await messaging.getToken();
+        console.log("All good!", token);
+      } catch (e) {
+        console.log(e);
+      }
+    },
     dispatchAllActions({ commit, state }) {
       // Add database observers
       // Load all subjects
@@ -105,7 +115,7 @@ export default new Vuex.Store({
         .database()
         .ref("answers/" + itemID + "/" + state.user.uid)
         .set(answer);
-      dispatch("updateToReview", { itemID: itemID, value: false });
+      dispatch("updateToReview", { itemID: itemID, value: "reviewed" });
     },
     // Updates the announcement
     updateNews(context, news) {

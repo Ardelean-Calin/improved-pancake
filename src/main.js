@@ -6,6 +6,7 @@ import "vuetify/dist/vuetify.min.css";
 import * as firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/database";
+import "firebase/messaging";
 
 // Initialise firebase
 import firebaseConfig from "../firebaseConfig";
@@ -17,6 +18,11 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import "./registerServiceWorker";
+
+const messaging = firebase.messaging();
+messaging.onMessage(function(payload) {
+  console.log("Message received. ", payload);
+});
 
 // Add user observer
 firebase.auth().onAuthStateChanged(user => {

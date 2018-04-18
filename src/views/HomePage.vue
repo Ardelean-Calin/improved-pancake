@@ -20,9 +20,10 @@
         <v-flex 
           xs6>
           <mini-card 
-            to="/schedule" 
+            
             text="Orar"
-            icon="date_range"/>
+            icon="date_range"
+            @click.native="requestToken"/>
         </v-flex>
       </v-layout>
     </v-container>
@@ -51,6 +52,11 @@ export default {
         (acc, curr) => acc + curr,
         0
       );
+    }
+  },
+  methods: {
+    requestToken() {
+      this.$store.dispatch("requestToken");
     }
   }
 };
