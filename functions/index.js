@@ -44,19 +44,41 @@ exports.userCreated = functions.auth.user().onCreate(async event => {
 });
 
 exports.assignReviews = functions.https.onRequest(async (req, resp) => {
+  const endDate = new Date();
+  const startDate = new Date().setDate(now.getDate() - 14); // two weeks ago
+
+  const items = await getItems();
   const users = await firebase
     .database()
     .ref("users")
     .once("value");
-  users.forEach(snapshot => {
+
+  await users.forEach(async snapshot => {
     const userID = snapshot.key;
     const toReview = snapshot.child("toReview");
+    let toReviewClone = { ...toReview.val() };
 
     toReview.forEach(snap => {
       const id = snap.key;
       const val = snap.val();
-
-      // TODO
+      const itemStartDate = val && val[id] && val["dateStart"];
+      if (
+        toReview[id] == "not_assigned" &&
+        itemStartDate &&
+        itemStartDate > startDate &&
+        itemStartDate <= endDate
+      ) {
+        toReviewClone[id] = "assigned";
+      } else {
+        console.log(`Error with ${id} for user ${userID}`);
+      }
     });
+
+    await firebase
+      .database()
+      .ref(`users/${userID}/toReview`)
+      .set(toReviewClone);
   });
+
+  resp.send("Done refreshing toReview list!");
 });
