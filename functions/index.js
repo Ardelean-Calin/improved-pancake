@@ -45,7 +45,7 @@ exports.userCreated = functions.auth.user().onCreate(async event => {
 
 exports.assignReviews = functions.https.onRequest(async (req, resp) => {
   const endDate = new Date();
-  const startDate = new Date().setDate(now.getDate() - 14); // two weeks ago
+  const startDate = new Date().setDate(endDate.getDate() - 14); // two weeks ago
 
   const items = await getItems();
   const users = await firebase
@@ -61,16 +61,25 @@ exports.assignReviews = functions.https.onRequest(async (req, resp) => {
     toReview.forEach(snap => {
       const id = snap.key;
       const val = snap.val();
-      const itemStartDate = val && val[id] && val["dateStart"];
+      const itemStartDate = items[id] && items[id].dateStart;
+
+      // Only consider items which are in the last 2 weeks
       if (
-        toReview[id] == "not_assigned" &&
         itemStartDate &&
         itemStartDate > startDate &&
         itemStartDate <= endDate
       ) {
-        toReviewClone[id] = "assigned";
+        toReviewClone[id] =
+          toReview.child(id).val() == "not_assigned"
+            ? "assigned"
+            : toReviewClone[id];
+        console.log(`Assigned: ${id} for ${userID}`);
       } else {
-        console.log(`Error with ${id} for user ${userID}`);
+        toReviewClone[id] =
+          toReview.child(id).val() == "assigned"
+            ? "not_assigned"
+            : toReviewClone[id];
+        console.log(`Unassigned: ${id} for ${userID}`);
       }
     });
 
