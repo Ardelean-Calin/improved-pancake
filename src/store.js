@@ -10,7 +10,10 @@ export default new Vuex.Store({
     user: {},
     toReview: {},
     questions: {},
-    news: {}
+    news: {},
+    snackbar: false,
+    snackText: "",
+    snackTimeout: 3000
   },
   getters: {
     // Items are courses, laboratories & seminaries
@@ -58,6 +61,10 @@ export default new Vuex.Store({
     },
     setNews: (state, news) => {
       state.news = news;
+    },
+    setSnack: (state, { text, value }) => {
+      state.snackText = text;
+      state.snackbar = value;
     }
   },
   actions: {
@@ -70,6 +77,13 @@ export default new Vuex.Store({
       } catch (e) {
         console.log(e);
       }
+    },
+    showSnackbar({ commit, state }, text) {
+      commit("setSnack", { text: text, value: true });
+      setTimeout(
+        () => commit("setSnack", { text: "", value: false }),
+        state.snackTimeout
+      );
     },
     dispatchAllActions({ commit, state }) {
       // Add database observers
@@ -116,6 +130,15 @@ export default new Vuex.Store({
         .ref("answers/" + itemID + "/" + state.user.uid)
         .set(answer);
       dispatch("updateToReview", { itemID: itemID, value: "reviewed" });
+    },
+    async uploadFeedback({ state }, { rating, comment }) {
+      await firebase
+        .database()
+        .ref(`feedback/${state.user.uid}`)
+        .set({
+          rating,
+          comment
+        });
     },
     // Updates the announcement
     updateNews(context, news) {
