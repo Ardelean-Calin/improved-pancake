@@ -6,13 +6,14 @@ import store from "./store";
 import AppShell from "./components/AppShell.vue";
 
 // Views
+import FeedbackPage from "./views/FeedbackPage.vue";
 import HomePage from "./views/HomePage.vue";
 import LoginPage from "./views/LoginPage.vue";
+import ReviewPage from "./views/ReviewPage.vue";
+import SchedulePage from "./views/SchedulePage.vue";
 import SignupPage from "./views/SignupPage.vue";
 import SubjectlistPage from "./views/SubjectlistPage.vue";
 import SubjectPage from "./views/SubjectPage.vue";
-import ReviewPage from "./views/ReviewPage.vue";
-import SchedulePage from "./views/SchedulePage.vue";
 
 Vue.use(Router);
 
@@ -58,7 +59,8 @@ export default new Router({
         {
           path: "schedule",
           component: SchedulePage
-        }
+        },
+        { path: "feedback", component: FeedbackPage, beforeEnter: isSignedIn }
       ]
     }
   ],
