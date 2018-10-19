@@ -19,6 +19,6 @@ yarn-error.log*
 *.njsproj
 *.sln
 
-*firebase*
+firebaseConfig.js
 functions/lib
 functions/cloud-functions-emulator.log

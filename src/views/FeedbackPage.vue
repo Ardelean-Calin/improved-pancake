@@ -71,7 +71,6 @@ export default {
       return index == this.selectedIcon || this.selectedIcon == null;
     },
     sendFeedback() {
-      console.log("feedback sent!");
       this.$store.dispatch("uploadFeedback", {
         rating: this.selectedIcon + 1,
         comment: this.comment

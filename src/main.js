@@ -9,7 +9,7 @@ import "firebase/database";
 import "firebase/messaging";
 
 // Initialise firebase
-import firebaseConfig from "../firebaseConfig";
+import { firebaseConfig } from "../firebaseConfig";
 firebase.initializeApp(firebaseConfig);
 
 import Vue from "vue";
