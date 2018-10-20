@@ -1,63 +1,65 @@
 <template>
-  <v-card 
-    flat 
-    style="height: 100%;">
-    <div class="cardTitle">
-      <div>{{ item.longTitle }}</div>
-    </div>
-    <div class="mainContainer">
-      <div 
-        v-for="(question, key) in questions" 
-        :key="key"
-        class="question">
-        <div class="questionTitle">{{ question.title }}</div>
-        <div class="questionContent">
-          <div 
-            v-if="question.type == 'binary'"
-            class="questionBinary">
-            <v-btn-toggle  
-              v-model="answers[key]"
-              mandatory>
-              <v-btn
-                flat 
-                value="true"
-                color="green">
-                <span>Da</span>
-                <v-icon>check</v-icon>
-              </v-btn>
-              <v-btn 
-                flat 
-                value="false"
-                color="red">
-                <span>Nu</span>
-                <v-icon>close</v-icon>
-              </v-btn>
-            </v-btn-toggle>
-          </div>
-          <div v-else-if="question.type == 'star'">
-            <star-rating v-model="answers[key]"/>
+  <v-flex fill-height>
+    <v-card 
+      flat 
+      style="height: 100%;">
+      <div class="cardTitle">
+        <div>{{ item.longTitle }}</div>
+      </div>
+      <div class="mainContainer">
+        <div 
+          v-for="(question, key) in questions" 
+          :key="key"
+          class="question">
+          <div class="questionTitle">{{ question.title }}</div>
+          <div class="questionContent">
+            <div 
+              v-if="question.type == 'binary'"
+              class="questionBinary">
+              <v-btn-toggle  
+                v-model="answers[key]"
+                mandatory>
+                <v-btn
+                  flat 
+                  value="true"
+                  color="green">
+                  <span>Da</span>
+                  <v-icon>check</v-icon>
+                </v-btn>
+                <v-btn 
+                  flat 
+                  value="false"
+                  color="red">
+                  <span>Nu</span>
+                  <v-icon>close</v-icon>
+                </v-btn>
+              </v-btn-toggle>
+            </div>
+            <div v-else-if="question.type == 'star'">
+              <star-rating v-model="answers[key]"/>
+            </div>
           </div>
         </div>
+        <div>
+          <v-text-field v-model="additionalComment" label="Comentarii adiționale" multi-line textarea no-resize></v-text-field>
+        </div>
+        <div class="btnContainer">
+          <v-btn @click="dialog = !dialog" color="primary" :disabled="!canSubmit" block>Trimite recenzia</v-btn>
+        </div>
       </div>
-      <div>
-        <v-text-field v-model="additionalComment" label="Comentarii adiționale" multi-line textarea no-resize></v-text-field>
-      </div>
-      <div class="btnContainer">
-        <v-btn @click="dialog = !dialog" color="primary" :disabled="!canSubmit" block>Trimite recenzia</v-btn>
-      </div>
-    </div>
-    <v-dialog v-model="dialog" max-width="290">
-      <v-card>
-        <v-card-title style="padding-bottom: 0" class="headline">Trimiteți recenzia?</v-card-title>
-        <v-card-text>Odată trimisă, recenzia nu mai poate fi repetată.</v-card-text>
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn color="red" flat @click.native="dialog = false">Anulează</v-btn>
-          <v-btn color="primary" flat outline @click.native="submitReview">Trimite</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
-  </v-card>
+      <v-dialog v-model="dialog" max-width="290">
+        <v-card>
+          <v-card-title style="padding-bottom: 0" class="headline">Trimiteți recenzia?</v-card-title>
+          <v-card-text>Odată trimisă, recenzia nu mai poate fi repetată.</v-card-text>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn color="red" flat @click.native="dialog = false">Anulează</v-btn>
+            <v-btn color="primary" flat outline @click.native="submitReview">Trimite</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
+    </v-card>
+  </v-flex>
 </template>
 
 <script>

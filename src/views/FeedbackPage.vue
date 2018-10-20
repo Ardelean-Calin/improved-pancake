@@ -20,7 +20,7 @@
         <div class="sentimentDescription">{{ sentimentDescription }}</div>
       </v-card>
       <v-card style="padding: 0rem 1rem 0rem 1rem; margin-top: 1rem">
-        <v-text-field v-model="comment" multi-line box label="Alte observații" clearable></v-text-field>
+        <v-textarea v-model="comment" box label="Alte observații" clearable></v-textarea>
       </v-card>
 
       <div style="flex-grow: 1"></div>

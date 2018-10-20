@@ -1,16 +1,18 @@
 <template>
-  <v-container>
-    <template v-for="subject in subjectData">
-      <subject-card 
-        :title="subject.titlu"
-        :img-src="subject.imgSrc"
-        :to="subject.linkTo"
-        :key="subject.key"
-        :badge="subject.notifications"
-        class="subject-card"
-      />
-    </template>
-  </v-container>
+  <v-flex fill-height>
+    <v-container>
+      <template v-for="subject in subjectData">
+        <subject-card 
+          :title="subject.titlu"
+          :img-src="subject.imgSrc"
+          :to="subject.linkTo"
+          :key="subject.key"
+          :badge="subject.notifications"
+          class="subject-card"
+        />
+      </template>
+    </v-container>
+  </v-flex>
 </template>
 
 <script>

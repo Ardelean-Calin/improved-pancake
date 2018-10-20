@@ -1,33 +1,35 @@
 <template>
-  <div>
-    <news-card v-if="signedIn"/>
-    <current-status v-else />
-    <v-container 
-      fluid
-      grid-list-lg >
-      <v-layout 
-        row
-        wrap
-        style="margin-top: -2.5rem">
-        <v-flex 
-          xs6>
-          <mini-card 
-            :badge="reviewBadge" 
-            to="/subjects" 
-            text="Discipline"
-            icon="book"/>
-        </v-flex>
-        <v-flex 
-          xs6>
-          <mini-card 
-            
-            text="Orar"
-            icon="date_range"
-            @click.native="requestToken"/>
-        </v-flex>
-      </v-layout>
-    </v-container>
-  </div>
+  <v-flex fill-height>
+    <div>
+      <news-card v-if="signedIn"/>
+      <current-status v-else />
+      <v-container 
+        fluid
+        grid-list-lg >
+        <v-layout 
+          row
+          wrap
+          style="margin-top: -2.5rem">
+          <v-flex 
+            xs6>
+            <mini-card 
+              :badge="reviewBadge" 
+              to="/subjects" 
+              text="Discipline"
+              icon="book"/>
+          </v-flex>
+          <v-flex 
+            xs6>
+            <mini-card 
+              
+              text="Orar"
+              icon="date_range"
+              @click.native="requestToken"/>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </div>
+  </v-flex>
 </template>
 
 <script>

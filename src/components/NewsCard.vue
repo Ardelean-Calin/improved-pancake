@@ -8,7 +8,7 @@
       <div
         v-if="editMode"
         class="editDiv">
-        <v-text-field
+        <v-textarea
           :counter="140"
           :rules="[(v) => {
             if(v)
@@ -19,7 +19,6 @@
           v-model="editText"
           label="Introduceți un anunț nou"
           clearable
-          multi-line
           no-resize
         />
       </div>
