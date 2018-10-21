@@ -73,12 +73,14 @@ exports.assignReviews = functions.https.onRequest(async (req, resp) => {
           toReview.child(id).val() == "not_assigned"
             ? "assigned"
             : toReviewClone[id];
+        // eslint-disable-next-line
         console.log(`Assigned: ${id} for ${userID}`);
       } else {
         toReviewClone[id] =
           toReview.child(id).val() == "assigned"
             ? "not_assigned"
             : toReviewClone[id];
+        // eslint-disable-next-line
         console.log(`Unassigned: ${id} for ${userID}`);
       }
     });

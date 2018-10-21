@@ -21,6 +21,7 @@ import "./registerServiceWorker";
 
 const messaging = firebase.messaging();
 messaging.onMessage(function(payload) {
+  // eslint-disable-next-line
   console.log("Message received. ", payload);
 });
 

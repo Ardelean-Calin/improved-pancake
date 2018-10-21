@@ -73,8 +73,10 @@ export default new Vuex.Store({
       try {
         await messaging.requestPermission();
         const token = await messaging.getToken();
+        // eslint-disable-next-line
         console.log("All good!", token);
       } catch (e) {
+        // eslint-disable-next-line
         console.log(e);
       }
     },
