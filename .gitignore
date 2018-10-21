@@ -22,3 +22,5 @@ yarn-error.log*
 firebaseConfig.js
 functions/lib
 functions/cloud-functions-emulator.log
+
+functions/*credentials.json
