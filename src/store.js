@@ -149,22 +149,27 @@ export default new Vuex.Store({
         .ref("news/")
         .set(news);
     },
-    // Update the user profile
-    async updateProfile({ state, commit }, { displayName }) {
-      await state.user.updateProfile({
-        displayName
-      });
-      let updatedUser = { ...state.user };
-      updatedUser.displayName = displayName;
-      commit("setUser", updatedUser);
-    },
     // Try and Sign-up the user
     signUp({ commit }, payload) {
       firebase
         .auth()
         .createUserWithEmailAndPassword(payload.email, payload.password)
         .then(user => {
-          commit("setUser", user);
+          // Update display name online
+          user.user.updateProfile({
+            displayName: payload.displayName,
+            photoURL: "https://identicon-1132.appspot.com/random"
+          });
+
+          // Update display name locally
+          commit("setUser", user.user);
+
+          // Add display name to users database
+          firebase
+            .database()
+            .ref(`users/${user.user.uid}/name`)
+            .set(payload.displayName);
+
           payload.sucCallback();
         })
         .catch(err => {

@@ -20,11 +20,10 @@
           </v-flex>
           <v-flex 
             xs6>
-            <mini-card 
-              
+            <mini-card   
+              to="/schedule"
               text="Orar"
-              icon="date_range"
-              @click.native="requestToken"/>
+              icon="date_range"/>
           </v-flex>
         </v-layout>
       </v-container>
@@ -48,12 +47,14 @@ export default {
       return this.$store.state.user ? true : false;
     },
     reviewBadge() {
-      // Get total number of notifications by summing the number of
-      // notifications for each subject.
-      return Object.values(this.$store.getters.notifications).reduce(
-        (acc, curr) => acc + curr,
-        0
-      );
+      if (this.signedIn) {
+        // Get total number of notifications by summing the number of
+        // notifications for each subject.
+        return Object.values(this.$store.getters.notifications).reduce(
+          (acc, curr) => acc + curr,
+          0
+        );
+      }
     }
   },
   methods: {

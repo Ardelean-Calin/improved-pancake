@@ -1,11 +1,9 @@
 <template>
   <div class="mainContainer">
-    <div class="_title secondary white--text text-xs-center">
-      <h1 class="display-1">Ce părere ai despre această aplicație?</h1>
-    </div>
     <div class="secondaryContainer">
       <v-card style="padding: 1rem">
-        <div class="sentimentContainer">
+        <div class="title" style="text-align: center; padding-bottom: 0.5rem">Părere despre aplicație</div>
+        <div class="sentimentContainer" :style="sentimentStyle">
           <v-icon v-for="(icon, index) in sentimentIcons"
             :key="index"
             :class="{
@@ -17,9 +15,9 @@
             {{ icon }}
           </v-icon>
         </div>
-        <div class="sentimentDescription">{{ sentimentDescription }}</div>
+        <div v-if="sentimentDescription" class="sentimentDescription">{{ sentimentDescription }}</div>
       </v-card>
-      <v-card style="padding: 0rem 1rem 0rem 1rem; margin-top: 1rem">
+      <v-card style="padding: 1rem 1rem 0rem 1rem; margin-top: 1rem">
         <v-textarea v-model="comment" box label="Alte observații" clearable></v-textarea>
       </v-card>
 
@@ -57,15 +55,26 @@ export default {
         3: "E faină.",
         4: "E super faină!"
       },
+      sentimentStyle: {
+        width: "100%",
+        height: "5rem",
+        maxHeight: "5rem",
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "space-around",
+        transition: "max-height 1s ease-in"
+      },
       selectedIcon: null,
       comment: null
     };
   },
   methods: {
     selectIcon(index) {
-      this.selectedIcon == index
-        ? (this.selectedIcon = null)
-        : (this.selectedIcon = index);
+      if (this.selectedIcon == index) {
+        this.selectedIcon = null;
+      } else {
+        this.selectedIcon = index;
+      }
     },
     isActive(index) {
       return index == this.selectedIcon || this.selectedIcon == null;
@@ -111,12 +120,14 @@ export default {
   padding: 1rem;
 }
 
-.sentimentContainer {
+.sentimentContainer3231 {
   width: 100%;
   height: 5rem;
+  max-height: 5rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  transition: max-height 1s ease-in;
 }
 
 .sentimentIcon {

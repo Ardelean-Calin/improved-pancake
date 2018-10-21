@@ -92,6 +92,7 @@ export default {
 
 .review-icon {
   font-size: 1.7rem;
-  margin-bottom: 0.6rem;
+  margin-right: 0.8rem;
+  /* margin-bottom: 0.6rem; */
 }
 </style>

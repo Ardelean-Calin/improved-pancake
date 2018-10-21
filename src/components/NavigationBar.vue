@@ -7,7 +7,10 @@
     >
       <div class="mainContent primary white--text">
         <template v-if="loggedIn">
-          <v-icon class="personIcon" dark>person</v-icon>
+          <v-list-tile-avatar color="white">
+            <img :src="photoURL">
+          </v-list-tile-avatar>
+          
           <div class="contactDetails">
             <div class="displayName">{{ displayName }}</div>
             <div class="email">{{ email }}</div>
@@ -59,15 +62,16 @@
             <v-list-tile-title>Feedback aplicație</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile v-if="loggedIn" ripple @click="notifications = !notifications">
-            <v-list-tile-action>
-              <v-icon>notifications_active</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-title>Notificări</v-list-tile-title>
-            <v-list-tile-action>
-              <v-switch color="primary" v-model="notifications"></v-switch> 
-            </v-list-tile-action>
-          </v-list-tile>
+        <!-- TODO: Re-enable notifications -->
+        <!-- <v-list-tile v-if="loggedIn" ripple @click="notifications = !notifications">
+          <v-list-tile-action>
+            <v-icon>notifications_active</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-title>Notificări</v-list-tile-title>
+          <v-list-tile-action>
+            <v-switch color="primary" v-model="notifications"></v-switch> 
+          </v-list-tile-action>
+        </v-list-tile> -->
       </v-list>
     </v-navigation-drawer>
     <v-toolbar 
@@ -139,6 +143,9 @@ export default {
     },
     email() {
       return this.$store.state.user.email;
+    },
+    photoURL() {
+      return "https://identicon-1132.appspot.com/random";
     }
   },
   methods: {

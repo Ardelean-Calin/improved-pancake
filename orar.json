@@ -1,0 +1,81 @@
+{
+  "SSF": {
+    "titlu": "Sisteme Flexibile de Fabricatie",
+    "imagine": "https://upload.wikimedia.org/wikipedia/commons/7/75/MakerBot_ThingOMatic_Bre_Pettis.jpg",
+    "descriere": "",
+    "curs": {
+      "startDate": "2018-10-01T18:00:00Z",
+      "period": 1,
+      "duration": 2,
+      "count": 14
+    },
+    "laborator": {
+      "startDate": "2018-10-01T16:00:00Z",
+      "period": 2,
+      "duration": 2,
+      "count": 7
+    }
+  },
+  "AI": {
+    "titlu": "Antreprenoriat in Inginerie",
+    "imagine": "https://i.imgur.com/E9RFcNSh.jpg",
+    "descriere": "",
+    "curs": {
+      "startDate": "2018-10-04T16:00:00Z",
+      "period": 1,
+      "duration": 2,
+      "count": 14
+    },
+    "seminar": {
+      "startDate": "2018-10-08T16:00:00Z",
+      "period": 2,
+      "duration": 2,
+      "count": 7
+    }
+  },
+  "CEST": {
+    "titlu": "Compatibilitate Electromagnetica, Standardizare si Testare",
+    "imagine": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/VFPt_Solenoid_correct2.svg/490px-VFPt_Solenoid_correct2.svg.png",
+    "descriere": "",
+    "curs": {
+      "startDate": "2018-10-08T14:00:00Z",
+      "period": 1,
+      "duration": 2,
+      "count": 14
+    },
+    "laborator": {
+      "startDate": "2018-10-02T16:00:00Z",
+      "period": 1,
+      "duration": 2,
+      "count": 14
+    }
+  },
+  "CMAIE": {
+    "titlu": "Complemente de Matematici Aplicate in Ingineria Electrica",
+    "imagine": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Archimedes_pi.svg/750px-Archimedes_pi.svg.png",
+    "descriere": "",
+    "curs": {
+      "startDate": "2018-10-05T18:00:00Z",
+      "period": 1,
+      "duration": 2,
+      "count": 7
+    },
+    "seminar": {
+      "startDate": "2018-10-03T14:00:00Z",
+      "period": 1,
+      "duration": 2,
+      "count": 7
+    }
+  },
+  "EIA": {
+    "titlu": "Etica si Integritate Academica",
+    "imagine": "https://upload.wikimedia.org/wikipedia/commons/4/49/%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg",
+    "descriere": "",
+    "curs": {
+      "startDate": "2018-11-22T19:00:00Z",
+      "period": 1,
+      "duration": 2,
+      "count": 7
+    }
+  }
+}

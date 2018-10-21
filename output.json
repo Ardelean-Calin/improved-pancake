@@ -1,0 +1,1316 @@
+{
+    "AI": {
+        "descriere": "",
+        "imageURL": "https://i.imgur.com/E9RFcNSh.jpg",
+        "iteme": {
+            "AI_curs_001": {
+                "dateEnd": 1538665200000,
+                "dateStart": 1538658000000,
+                "descriere": "",
+                "longTitle": "AI - Cursul 1",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 1",
+                "type": "curs"
+            },
+            "AI_curs_002": {
+                "dateEnd": 1539270000000,
+                "dateStart": 1539262800000,
+                "descriere": "",
+                "longTitle": "AI - Cursul 2",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 2",
+                "type": "curs"
+            },
+            "AI_curs_003": {
+                "dateEnd": 1539874800000,
+                "dateStart": 1539867600000,
+                "descriere": "",
+                "longTitle": "AI - Cursul 3",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 3",
+                "type": "curs"
+            },
+            "AI_curs_004": {
+                "dateEnd": 1540479600000,
+                "dateStart": 1540472400000,
+                "descriere": "",
+                "longTitle": "AI - Cursul 4",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 4",
+                "type": "curs"
+            },
+            "AI_curs_005": {
+                "dateEnd": 1541088000000,
+                "dateStart": 1541080800000,
+                "descriere": "",
+                "longTitle": "AI - Cursul 5",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 5",
+                "type": "curs"
+            },
+            "AI_curs_006": {
+                "dateEnd": 1541692800000,
+                "dateStart": 1541685600000,
+                "descriere": "",
+                "longTitle": "AI - Cursul 6",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 6",
+                "type": "curs"
+            },
+            "AI_curs_007": {
+                "dateEnd": 1542297600000,
+                "dateStart": 1542290400000,
+                "descriere": "",
+                "longTitle": "AI - Cursul 7",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 7",
+                "type": "curs"
+            },
+            "AI_curs_008": {
+                "dateEnd": 1542902400000,
+                "dateStart": 1542895200000,
+                "descriere": "",
+                "longTitle": "AI - Cursul 8",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 8",
+                "type": "curs"
+            },
+            "AI_curs_009": {
+                "dateEnd": 1543507200000,
+                "dateStart": 1543500000000,
+                "descriere": "",
+                "longTitle": "AI - Cursul 9",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 9",
+                "type": "curs"
+            },
+            "AI_curs_010": {
+                "dateEnd": 1544112000000,
+                "dateStart": 1544104800000,
+                "descriere": "",
+                "longTitle": "AI - Cursul 10",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 10",
+                "type": "curs"
+            },
+            "AI_curs_011": {
+                "dateEnd": 1544716800000,
+                "dateStart": 1544709600000,
+                "descriere": "",
+                "longTitle": "AI - Cursul 11",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 11",
+                "type": "curs"
+            },
+            "AI_curs_012": {
+                "dateEnd": 1545321600000,
+                "dateStart": 1545314400000,
+                "descriere": "",
+                "longTitle": "AI - Cursul 12",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 12",
+                "type": "curs"
+            },
+            "AI_curs_013": {
+                "dateEnd": 1545926400000,
+                "dateStart": 1545919200000,
+                "descriere": "",
+                "longTitle": "AI - Cursul 13",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 13",
+                "type": "curs"
+            },
+            "AI_curs_014": {
+                "dateEnd": 1546531200000,
+                "dateStart": 1546524000000,
+                "descriere": "",
+                "longTitle": "AI - Cursul 14",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 14",
+                "type": "curs"
+            },
+            "AI_seminar_001": {
+                "dateEnd": 1539010800000,
+                "dateStart": 1539003600000,
+                "descriere": "",
+                "longTitle": "AI - Seminarul 1",
+                "questions": {
+                    "qs0": true,
+                    "qs1": true,
+                    "qs2": true,
+                    "qs3": true
+                },
+                "shortTitle": "Seminarul 1",
+                "type": "seminar"
+            },
+            "AI_seminar_002": {
+                "dateEnd": 1540220400000,
+                "dateStart": 1540213200000,
+                "descriere": "",
+                "longTitle": "AI - Seminarul 2",
+                "questions": {
+                    "qs0": true,
+                    "qs1": true,
+                    "qs2": true,
+                    "qs3": true
+                },
+                "shortTitle": "Seminarul 2",
+                "type": "seminar"
+            },
+            "AI_seminar_003": {
+                "dateEnd": 1541433600000,
+                "dateStart": 1541426400000,
+                "descriere": "",
+                "longTitle": "AI - Seminarul 3",
+                "questions": {
+                    "qs0": true,
+                    "qs1": true,
+                    "qs2": true,
+                    "qs3": true
+                },
+                "shortTitle": "Seminarul 3",
+                "type": "seminar"
+            },
+            "AI_seminar_004": {
+                "dateEnd": 1542643200000,
+                "dateStart": 1542636000000,
+                "descriere": "",
+                "longTitle": "AI - Seminarul 4",
+                "questions": {
+                    "qs0": true,
+                    "qs1": true,
+                    "qs2": true,
+                    "qs3": true
+                },
+                "shortTitle": "Seminarul 4",
+                "type": "seminar"
+            },
+            "AI_seminar_005": {
+                "dateEnd": 1543852800000,
+                "dateStart": 1543845600000,
+                "descriere": "",
+                "longTitle": "AI - Seminarul 5",
+                "questions": {
+                    "qs0": true,
+                    "qs1": true,
+                    "qs2": true,
+                    "qs3": true
+                },
+                "shortTitle": "Seminarul 5",
+                "type": "seminar"
+            },
+            "AI_seminar_006": {
+                "dateEnd": 1545062400000,
+                "dateStart": 1545055200000,
+                "descriere": "",
+                "longTitle": "AI - Seminarul 6",
+                "questions": {
+                    "qs0": true,
+                    "qs1": true,
+                    "qs2": true,
+                    "qs3": true
+                },
+                "shortTitle": "Seminarul 6",
+                "type": "seminar"
+            },
+            "AI_seminar_007": {
+                "dateEnd": 1546272000000,
+                "dateStart": 1546264800000,
+                "descriere": "",
+                "longTitle": "AI - Seminarul 7",
+                "questions": {
+                    "qs0": true,
+                    "qs1": true,
+                    "qs2": true,
+                    "qs3": true
+                },
+                "shortTitle": "Seminarul 7",
+                "type": "seminar"
+            }
+        },
+        "subtitlu": "",
+        "titlu": "Antreprenoriat in Inginerie"
+    },
+    "CEST": {
+        "descriere": "",
+        "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/VFPt_Solenoid_correct2.svg/490px-VFPt_Solenoid_correct2.svg.png",
+        "iteme": {
+            "CEST_curs_001": {
+                "dateEnd": 1539003600000,
+                "dateStart": 1538996400000,
+                "descriere": "",
+                "longTitle": "CEST - Cursul 1",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 1",
+                "type": "curs"
+            },
+            "CEST_curs_002": {
+                "dateEnd": 1539608400000,
+                "dateStart": 1539601200000,
+                "descriere": "",
+                "longTitle": "CEST - Cursul 2",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 2",
+                "type": "curs"
+            },
+            "CEST_curs_003": {
+                "dateEnd": 1540213200000,
+                "dateStart": 1540206000000,
+                "descriere": "",
+                "longTitle": "CEST - Cursul 3",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 3",
+                "type": "curs"
+            },
+            "CEST_curs_004": {
+                "dateEnd": 1540821600000,
+                "dateStart": 1540814400000,
+                "descriere": "",
+                "longTitle": "CEST - Cursul 4",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 4",
+                "type": "curs"
+            },
+            "CEST_curs_005": {
+                "dateEnd": 1541426400000,
+                "dateStart": 1541419200000,
+                "descriere": "",
+                "longTitle": "CEST - Cursul 5",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 5",
+                "type": "curs"
+            },
+            "CEST_curs_006": {
+                "dateEnd": 1542031200000,
+                "dateStart": 1542024000000,
+                "descriere": "",
+                "longTitle": "CEST - Cursul 6",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 6",
+                "type": "curs"
+            },
+            "CEST_curs_007": {
+                "dateEnd": 1542636000000,
+                "dateStart": 1542628800000,
+                "descriere": "",
+                "longTitle": "CEST - Cursul 7",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 7",
+                "type": "curs"
+            },
+            "CEST_curs_008": {
+                "dateEnd": 1543240800000,
+                "dateStart": 1543233600000,
+                "descriere": "",
+                "longTitle": "CEST - Cursul 8",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 8",
+                "type": "curs"
+            },
+            "CEST_curs_009": {
+                "dateEnd": 1543845600000,
+                "dateStart": 1543838400000,
+                "descriere": "",
+                "longTitle": "CEST - Cursul 9",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 9",
+                "type": "curs"
+            },
+            "CEST_curs_010": {
+                "dateEnd": 1544450400000,
+                "dateStart": 1544443200000,
+                "descriere": "",
+                "longTitle": "CEST - Cursul 10",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 10",
+                "type": "curs"
+            },
+            "CEST_curs_011": {
+                "dateEnd": 1545055200000,
+                "dateStart": 1545048000000,
+                "descriere": "",
+                "longTitle": "CEST - Cursul 11",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 11",
+                "type": "curs"
+            },
+            "CEST_curs_012": {
+                "dateEnd": 1545660000000,
+                "dateStart": 1545652800000,
+                "descriere": "",
+                "longTitle": "CEST - Cursul 12",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 12",
+                "type": "curs"
+            },
+            "CEST_curs_013": {
+                "dateEnd": 1546264800000,
+                "dateStart": 1546257600000,
+                "descriere": "",
+                "longTitle": "CEST - Cursul 13",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 13",
+                "type": "curs"
+            },
+            "CEST_curs_014": {
+                "dateEnd": 1546869600000,
+                "dateStart": 1546862400000,
+                "descriere": "",
+                "longTitle": "CEST - Cursul 14",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 14",
+                "type": "curs"
+            },
+            "CEST_laborator_001": {
+                "dateEnd": 1538492400000,
+                "dateStart": 1538485200000,
+                "descriere": "",
+                "longTitle": "CEST - Laboratorul 1",
+                "questions": {
+                    "ql0": true,
+                    "ql1": true,
+                    "ql2": true,
+                    "ql3": true
+                },
+                "shortTitle": "Laboratorul 1",
+                "type": "laborator"
+            },
+            "CEST_laborator_002": {
+                "dateEnd": 1539097200000,
+                "dateStart": 1539090000000,
+                "descriere": "",
+                "longTitle": "CEST - Laboratorul 2",
+                "questions": {
+                    "ql0": true,
+                    "ql1": true,
+                    "ql2": true,
+                    "ql3": true
+                },
+                "shortTitle": "Laboratorul 2",
+                "type": "laborator"
+            },
+            "CEST_laborator_003": {
+                "dateEnd": 1539702000000,
+                "dateStart": 1539694800000,
+                "descriere": "",
+                "longTitle": "CEST - Laboratorul 3",
+                "questions": {
+                    "ql0": true,
+                    "ql1": true,
+                    "ql2": true,
+                    "ql3": true
+                },
+                "shortTitle": "Laboratorul 3",
+                "type": "laborator"
+            },
+            "CEST_laborator_004": {
+                "dateEnd": 1540306800000,
+                "dateStart": 1540299600000,
+                "descriere": "",
+                "longTitle": "CEST - Laboratorul 4",
+                "questions": {
+                    "ql0": true,
+                    "ql1": true,
+                    "ql2": true,
+                    "ql3": true
+                },
+                "shortTitle": "Laboratorul 4",
+                "type": "laborator"
+            },
+            "CEST_laborator_005": {
+                "dateEnd": 1540915200000,
+                "dateStart": 1540908000000,
+                "descriere": "",
+                "longTitle": "CEST - Laboratorul 5",
+                "questions": {
+                    "ql0": true,
+                    "ql1": true,
+                    "ql2": true,
+                    "ql3": true
+                },
+                "shortTitle": "Laboratorul 5",
+                "type": "laborator"
+            },
+            "CEST_laborator_006": {
+                "dateEnd": 1541520000000,
+                "dateStart": 1541512800000,
+                "descriere": "",
+                "longTitle": "CEST - Laboratorul 6",
+                "questions": {
+                    "ql0": true,
+                    "ql1": true,
+                    "ql2": true,
+                    "ql3": true
+                },
+                "shortTitle": "Laboratorul 6",
+                "type": "laborator"
+            },
+            "CEST_laborator_007": {
+                "dateEnd": 1542124800000,
+                "dateStart": 1542117600000,
+                "descriere": "",
+                "longTitle": "CEST - Laboratorul 7",
+                "questions": {
+                    "ql0": true,
+                    "ql1": true,
+                    "ql2": true,
+                    "ql3": true
+                },
+                "shortTitle": "Laboratorul 7",
+                "type": "laborator"
+            },
+            "CEST_laborator_008": {
+                "dateEnd": 1542729600000,
+                "dateStart": 1542722400000,
+                "descriere": "",
+                "longTitle": "CEST - Laboratorul 8",
+                "questions": {
+                    "ql0": true,
+                    "ql1": true,
+                    "ql2": true,
+                    "ql3": true
+                },
+                "shortTitle": "Laboratorul 8",
+                "type": "laborator"
+            },
+            "CEST_laborator_009": {
+                "dateEnd": 1543334400000,
+                "dateStart": 1543327200000,
+                "descriere": "",
+                "longTitle": "CEST - Laboratorul 9",
+                "questions": {
+                    "ql0": true,
+                    "ql1": true,
+                    "ql2": true,
+                    "ql3": true
+                },
+                "shortTitle": "Laboratorul 9",
+                "type": "laborator"
+            },
+            "CEST_laborator_010": {
+                "dateEnd": 1543939200000,
+                "dateStart": 1543932000000,
+                "descriere": "",
+                "longTitle": "CEST - Laboratorul 10",
+                "questions": {
+                    "ql0": true,
+                    "ql1": true,
+                    "ql2": true,
+                    "ql3": true
+                },
+                "shortTitle": "Laboratorul 10",
+                "type": "laborator"
+            },
+            "CEST_laborator_011": {
+                "dateEnd": 1544544000000,
+                "dateStart": 1544536800000,
+                "descriere": "",
+                "longTitle": "CEST - Laboratorul 11",
+                "questions": {
+                    "ql0": true,
+                    "ql1": true,
+                    "ql2": true,
+                    "ql3": true
+                },
+                "shortTitle": "Laboratorul 11",
+                "type": "laborator"
+            },
+            "CEST_laborator_012": {
+                "dateEnd": 1545148800000,
+                "dateStart": 1545141600000,
+                "descriere": "",
+                "longTitle": "CEST - Laboratorul 12",
+                "questions": {
+                    "ql0": true,
+                    "ql1": true,
+                    "ql2": true,
+                    "ql3": true
+                },
+                "shortTitle": "Laboratorul 12",
+                "type": "laborator"
+            },
+            "CEST_laborator_013": {
+                "dateEnd": 1545753600000,
+                "dateStart": 1545746400000,
+                "descriere": "",
+                "longTitle": "CEST - Laboratorul 13",
+                "questions": {
+                    "ql0": true,
+                    "ql1": true,
+                    "ql2": true,
+                    "ql3": true
+                },
+                "shortTitle": "Laboratorul 13",
+                "type": "laborator"
+            },
+            "CEST_laborator_014": {
+                "dateEnd": 1546358400000,
+                "dateStart": 1546351200000,
+                "descriere": "",
+                "longTitle": "CEST - Laboratorul 14",
+                "questions": {
+                    "ql0": true,
+                    "ql1": true,
+                    "ql2": true,
+                    "ql3": true
+                },
+                "shortTitle": "Laboratorul 14",
+                "type": "laborator"
+            }
+        },
+        "subtitlu": "",
+        "titlu": "Compatibilitate Electromagnetica, Standardizare si Testare"
+    },
+    "CMAIE": {
+        "descriere": "",
+        "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Archimedes_pi.svg/750px-Archimedes_pi.svg.png",
+        "iteme": {
+            "CMAIE_curs_001": {
+                "dateEnd": 1538758800000,
+                "dateStart": 1538751600000,
+                "descriere": "",
+                "longTitle": "CMAIE - Cursul 1",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 1",
+                "type": "curs"
+            },
+            "CMAIE_curs_002": {
+                "dateEnd": 1539363600000,
+                "dateStart": 1539356400000,
+                "descriere": "",
+                "longTitle": "CMAIE - Cursul 2",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 2",
+                "type": "curs"
+            },
+            "CMAIE_curs_003": {
+                "dateEnd": 1539968400000,
+                "dateStart": 1539961200000,
+                "descriere": "",
+                "longTitle": "CMAIE - Cursul 3",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 3",
+                "type": "curs"
+            },
+            "CMAIE_curs_004": {
+                "dateEnd": 1540573200000,
+                "dateStart": 1540566000000,
+                "descriere": "",
+                "longTitle": "CMAIE - Cursul 4",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 4",
+                "type": "curs"
+            },
+            "CMAIE_curs_005": {
+                "dateEnd": 1541181600000,
+                "dateStart": 1541174400000,
+                "descriere": "",
+                "longTitle": "CMAIE - Cursul 5",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 5",
+                "type": "curs"
+            },
+            "CMAIE_curs_006": {
+                "dateEnd": 1541786400000,
+                "dateStart": 1541779200000,
+                "descriere": "",
+                "longTitle": "CMAIE - Cursul 6",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 6",
+                "type": "curs"
+            },
+            "CMAIE_curs_007": {
+                "dateEnd": 1542391200000,
+                "dateStart": 1542384000000,
+                "descriere": "",
+                "longTitle": "CMAIE - Cursul 7",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 7",
+                "type": "curs"
+            },
+            "CMAIE_seminar_001": {
+                "dateEnd": 1538571600000,
+                "dateStart": 1538564400000,
+                "descriere": "",
+                "longTitle": "CMAIE - Seminarul 1",
+                "questions": {
+                    "qs0": true,
+                    "qs1": true,
+                    "qs2": true,
+                    "qs3": true
+                },
+                "shortTitle": "Seminarul 1",
+                "type": "seminar"
+            },
+            "CMAIE_seminar_002": {
+                "dateEnd": 1539176400000,
+                "dateStart": 1539169200000,
+                "descriere": "",
+                "longTitle": "CMAIE - Seminarul 2",
+                "questions": {
+                    "qs0": true,
+                    "qs1": true,
+                    "qs2": true,
+                    "qs3": true
+                },
+                "shortTitle": "Seminarul 2",
+                "type": "seminar"
+            },
+            "CMAIE_seminar_003": {
+                "dateEnd": 1539781200000,
+                "dateStart": 1539774000000,
+                "descriere": "",
+                "longTitle": "CMAIE - Seminarul 3",
+                "questions": {
+                    "qs0": true,
+                    "qs1": true,
+                    "qs2": true,
+                    "qs3": true
+                },
+                "shortTitle": "Seminarul 3",
+                "type": "seminar"
+            },
+            "CMAIE_seminar_004": {
+                "dateEnd": 1540386000000,
+                "dateStart": 1540378800000,
+                "descriere": "",
+                "longTitle": "CMAIE - Seminarul 4",
+                "questions": {
+                    "qs0": true,
+                    "qs1": true,
+                    "qs2": true,
+                    "qs3": true
+                },
+                "shortTitle": "Seminarul 4",
+                "type": "seminar"
+            },
+            "CMAIE_seminar_005": {
+                "dateEnd": 1540994400000,
+                "dateStart": 1540987200000,
+                "descriere": "",
+                "longTitle": "CMAIE - Seminarul 5",
+                "questions": {
+                    "qs0": true,
+                    "qs1": true,
+                    "qs2": true,
+                    "qs3": true
+                },
+                "shortTitle": "Seminarul 5",
+                "type": "seminar"
+            },
+            "CMAIE_seminar_006": {
+                "dateEnd": 1541599200000,
+                "dateStart": 1541592000000,
+                "descriere": "",
+                "longTitle": "CMAIE - Seminarul 6",
+                "questions": {
+                    "qs0": true,
+                    "qs1": true,
+                    "qs2": true,
+                    "qs3": true
+                },
+                "shortTitle": "Seminarul 6",
+                "type": "seminar"
+            },
+            "CMAIE_seminar_007": {
+                "dateEnd": 1542204000000,
+                "dateStart": 1542196800000,
+                "descriere": "",
+                "longTitle": "CMAIE - Seminarul 7",
+                "questions": {
+                    "qs0": true,
+                    "qs1": true,
+                    "qs2": true,
+                    "qs3": true
+                },
+                "shortTitle": "Seminarul 7",
+                "type": "seminar"
+            }
+        },
+        "subtitlu": "",
+        "titlu": "Complemente de Matematici Aplicate in Ingineria Electrica"
+    },
+    "EIA": {
+        "descriere": "",
+        "imageURL": "https://upload.wikimedia.org/wikipedia/commons/4/49/%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg",
+        "iteme": {
+            "EIA_curs_001": {
+                "dateEnd": 1542913200000,
+                "dateStart": 1542906000000,
+                "descriere": "",
+                "longTitle": "EIA - Cursul 1",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 1",
+                "type": "curs"
+            },
+            "EIA_curs_002": {
+                "dateEnd": 1543518000000,
+                "dateStart": 1543510800000,
+                "descriere": "",
+                "longTitle": "EIA - Cursul 2",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 2",
+                "type": "curs"
+            },
+            "EIA_curs_003": {
+                "dateEnd": 1544122800000,
+                "dateStart": 1544115600000,
+                "descriere": "",
+                "longTitle": "EIA - Cursul 3",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 3",
+                "type": "curs"
+            },
+            "EIA_curs_004": {
+                "dateEnd": 1544727600000,
+                "dateStart": 1544720400000,
+                "descriere": "",
+                "longTitle": "EIA - Cursul 4",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 4",
+                "type": "curs"
+            },
+            "EIA_curs_005": {
+                "dateEnd": 1545332400000,
+                "dateStart": 1545325200000,
+                "descriere": "",
+                "longTitle": "EIA - Cursul 5",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 5",
+                "type": "curs"
+            },
+            "EIA_curs_006": {
+                "dateEnd": 1545937200000,
+                "dateStart": 1545930000000,
+                "descriere": "",
+                "longTitle": "EIA - Cursul 6",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 6",
+                "type": "curs"
+            },
+            "EIA_curs_007": {
+                "dateEnd": 1546542000000,
+                "dateStart": 1546534800000,
+                "descriere": "",
+                "longTitle": "EIA - Cursul 7",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 7",
+                "type": "curs"
+            }
+        },
+        "subtitlu": "",
+        "titlu": "Etica si Integritate Academica"
+    },
+    "SSF": {
+        "descriere": "",
+        "imageURL": "https://upload.wikimedia.org/wikipedia/commons/7/75/MakerBot_ThingOMatic_Bre_Pettis.jpg",
+        "iteme": {
+            "SSF_curs_001": {
+                "dateEnd": 1538413200000,
+                "dateStart": 1538406000000,
+                "descriere": "",
+                "longTitle": "SSF - Cursul 1",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 1",
+                "type": "curs"
+            },
+            "SSF_curs_002": {
+                "dateEnd": 1539018000000,
+                "dateStart": 1539010800000,
+                "descriere": "",
+                "longTitle": "SSF - Cursul 2",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 2",
+                "type": "curs"
+            },
+            "SSF_curs_003": {
+                "dateEnd": 1539622800000,
+                "dateStart": 1539615600000,
+                "descriere": "",
+                "longTitle": "SSF - Cursul 3",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 3",
+                "type": "curs"
+            },
+            "SSF_curs_004": {
+                "dateEnd": 1540227600000,
+                "dateStart": 1540220400000,
+                "descriere": "",
+                "longTitle": "SSF - Cursul 4",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 4",
+                "type": "curs"
+            },
+            "SSF_curs_005": {
+                "dateEnd": 1540836000000,
+                "dateStart": 1540828800000,
+                "descriere": "",
+                "longTitle": "SSF - Cursul 5",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 5",
+                "type": "curs"
+            },
+            "SSF_curs_006": {
+                "dateEnd": 1541440800000,
+                "dateStart": 1541433600000,
+                "descriere": "",
+                "longTitle": "SSF - Cursul 6",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 6",
+                "type": "curs"
+            },
+            "SSF_curs_007": {
+                "dateEnd": 1542045600000,
+                "dateStart": 1542038400000,
+                "descriere": "",
+                "longTitle": "SSF - Cursul 7",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 7",
+                "type": "curs"
+            },
+            "SSF_curs_008": {
+                "dateEnd": 1542650400000,
+                "dateStart": 1542643200000,
+                "descriere": "",
+                "longTitle": "SSF - Cursul 8",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 8",
+                "type": "curs"
+            },
+            "SSF_curs_009": {
+                "dateEnd": 1543255200000,
+                "dateStart": 1543248000000,
+                "descriere": "",
+                "longTitle": "SSF - Cursul 9",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 9",
+                "type": "curs"
+            },
+            "SSF_curs_010": {
+                "dateEnd": 1543860000000,
+                "dateStart": 1543852800000,
+                "descriere": "",
+                "longTitle": "SSF - Cursul 10",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 10",
+                "type": "curs"
+            },
+            "SSF_curs_011": {
+                "dateEnd": 1544464800000,
+                "dateStart": 1544457600000,
+                "descriere": "",
+                "longTitle": "SSF - Cursul 11",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 11",
+                "type": "curs"
+            },
+            "SSF_curs_012": {
+                "dateEnd": 1545069600000,
+                "dateStart": 1545062400000,
+                "descriere": "",
+                "longTitle": "SSF - Cursul 12",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 12",
+                "type": "curs"
+            },
+            "SSF_curs_013": {
+                "dateEnd": 1545674400000,
+                "dateStart": 1545667200000,
+                "descriere": "",
+                "longTitle": "SSF - Cursul 13",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 13",
+                "type": "curs"
+            },
+            "SSF_curs_014": {
+                "dateEnd": 1546279200000,
+                "dateStart": 1546272000000,
+                "descriere": "",
+                "longTitle": "SSF - Cursul 14",
+                "questions": {
+                    "qc0": true,
+                    "qc1": true,
+                    "qc2": true,
+                    "qc3": true
+                },
+                "shortTitle": "Cursul 14",
+                "type": "curs"
+            },
+            "SSF_laborator_001": {
+                "dateEnd": 1538406000000,
+                "dateStart": 1538398800000,
+                "descriere": "",
+                "longTitle": "SSF - Laboratorul 1",
+                "questions": {
+                    "ql0": true,
+                    "ql1": true,
+                    "ql2": true,
+                    "ql3": true
+                },
+                "shortTitle": "Laboratorul 1",
+                "type": "laborator"
+            },
+            "SSF_laborator_002": {
+                "dateEnd": 1539615600000,
+                "dateStart": 1539608400000,
+                "descriere": "",
+                "longTitle": "SSF - Laboratorul 2",
+                "questions": {
+                    "ql0": true,
+                    "ql1": true,
+                    "ql2": true,
+                    "ql3": true
+                },
+                "shortTitle": "Laboratorul 2",
+                "type": "laborator"
+            },
+            "SSF_laborator_003": {
+                "dateEnd": 1540828800000,
+                "dateStart": 1540821600000,
+                "descriere": "",
+                "longTitle": "SSF - Laboratorul 3",
+                "questions": {
+                    "ql0": true,
+                    "ql1": true,
+                    "ql2": true,
+                    "ql3": true
+                },
+                "shortTitle": "Laboratorul 3",
+                "type": "laborator"
+            },
+            "SSF_laborator_004": {
+                "dateEnd": 1542038400000,
+                "dateStart": 1542031200000,
+                "descriere": "",
+                "longTitle": "SSF - Laboratorul 4",
+                "questions": {
+                    "ql0": true,
+                    "ql1": true,
+                    "ql2": true,
+                    "ql3": true
+                },
+                "shortTitle": "Laboratorul 4",
+                "type": "laborator"
+            },
+            "SSF_laborator_005": {
+                "dateEnd": 1543248000000,
+                "dateStart": 1543240800000,
+                "descriere": "",
+                "longTitle": "SSF - Laboratorul 5",
+                "questions": {
+                    "ql0": true,
+                    "ql1": true,
+                    "ql2": true,
+                    "ql3": true
+                },
+                "shortTitle": "Laboratorul 5",
+                "type": "laborator"
+            },
+            "SSF_laborator_006": {
+                "dateEnd": 1544457600000,
+                "dateStart": 1544450400000,
+                "descriere": "",
+                "longTitle": "SSF - Laboratorul 6",
+                "questions": {
+                    "ql0": true,
+                    "ql1": true,
+                    "ql2": true,
+                    "ql3": true
+                },
+                "shortTitle": "Laboratorul 6",
+                "type": "laborator"
+            },
+            "SSF_laborator_007": {
+                "dateEnd": 1545667200000,
+                "dateStart": 1545660000000,
+                "descriere": "",
+                "longTitle": "SSF - Laboratorul 7",
+                "questions": {
+                    "ql0": true,
+                    "ql1": true,
+                    "ql2": true,
+                    "ql3": true
+                },
+                "shortTitle": "Laboratorul 7",
+                "type": "laborator"
+            }
+        },
+        "subtitlu": "",
+        "titlu": "Sisteme Flexibile de Fabricatie"
+    }
+}

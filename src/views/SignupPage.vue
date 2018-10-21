@@ -48,6 +48,7 @@ export default {
       this.$store.dispatch("signUp", {
         email: this.email,
         password: this.password,
+        displayName: this.fullName,
         errCallback: this.errorHandler,
         sucCallback: this.successHandler
       });
@@ -70,7 +71,6 @@ export default {
       }
     },
     successHandler() {
-      this.$store.dispatch("updateProfile", { displayName: this.fullName });
       this.$router.push("/");
     }
   }
