@@ -1,20 +1,17 @@
 <template>
-  <v-layout 
-    v-touch="{
-      right: navigateBack,
-      left: navigateForward
-    }">
-    <v-content>
-      <navigation-bar/>
-        <transition name="fade">
-          <router-view/>
-        </transition>
-      <v-snackbar :timeout="this.$store.state.snackTimeout" v-model="snackbar">
-        {{ snackText }}
-        <v-btn flat color="primary" @click.native="closeSnack">Închide</v-btn>
-      </v-snackbar>
-    </v-content>
-  </v-layout>
+  <v-content>
+    <navigation-bar/>
+    <transition name="fade">
+        <router-view v-touch="{
+         right: navigateBack,
+         left: navigateForward
+       }"/>
+    </transition>
+    <v-snackbar :timeout="this.$store.state.snackTimeout" v-model="snackbar">
+      {{ snackText }}
+      <v-btn flat color="primary" @click.native="closeSnack">Închide</v-btn>
+    </v-snackbar>
+  </v-content>
 </template>
 
 <script>
