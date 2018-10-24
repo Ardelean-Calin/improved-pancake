@@ -6,5 +6,10 @@ module.exports = {
         poll: 200
       }
     }
+  },
+  pwa: {
+    name: "Master SSEA",
+    themeColor: "#2196F3",
+    msTileColor: "#FFFFFF"
   }
 };
