@@ -65,6 +65,9 @@ export default new Vuex.Store({
     setSnack: (state, { text, value }) => {
       state.snackText = text;
       state.snackbar = value;
+    },
+    setSnackTimeout: (state, timeout) => {
+      state.snackTimeout = timeout;
     }
   },
   actions: {
@@ -80,12 +83,15 @@ export default new Vuex.Store({
         console.log(e);
       }
     },
-    showSnackbar({ commit, state }, text) {
+    showSnackbar({ commit, state }, { text, timeout }) {
       commit("setSnack", { text: text, value: true });
-      setTimeout(
-        () => commit("setSnack", { text: "", value: false }),
-        state.snackTimeout
-      );
+      commit("setSnackTimeout", timeout);
+      if (timeout != 0) {
+        setTimeout(
+          () => commit("setSnack", { text: "", value: false }),
+          state.snackTimeout
+        );
+      }
     },
     dispatchAllActions({ commit, state }) {
       // Add database observers

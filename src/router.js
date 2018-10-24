@@ -58,17 +58,24 @@ export default new Router({
         { path: "signup", component: SignupPage, beforeEnter: isSignedIn },
         {
           path: "schedule",
-          component: SchedulePage
+          component: SchedulePage,
+          beforeEnter: isSignedIn
         },
         { path: "feedback", component: FeedbackPage, beforeEnter: isSignedIn }
       ]
     }
   ],
-  scrollBehavior(to, from, savedPosition) {
-    if (savedPosition) {
-      return savedPosition;
-    } else {
-      return { x: 0, y: 0 };
-    }
+  scrollBehavior({ savedPosition }) {
+    return new Promise((resolve, reject) => {
+      if (savedPosition) {
+        setTimeout(() => {
+          resolve(savedPosition);
+        }, 200);
+      } else {
+        setTimeout(() => {
+          resolve({ x: 0, y: 0 });
+        }, 200);
+      }
+    });
   }
 });

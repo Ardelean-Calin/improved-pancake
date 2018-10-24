@@ -9,6 +9,11 @@
             <v-layout column align-center>
               <div class="display-1 font-weight-bold white--text">{{timeNow}}</div>
               <div class="text-uppercase font-weight-light white--text">{{dateNow}}</div>
+              <v-layout column align-center v-if="currentItem != null">
+                <div class="white--text" style="border: 0.5px solid; width: 15rem; max-height: 1px; margin: 0.5rem"></div>
+                <div class="white--text">În desfășurare</div>
+                <div class="headline font-weight-bold white--text">{{currentItem}}</div>
+              </v-layout>
             </v-layout>
           </v-layout>
         </v-container></v-img>
@@ -19,7 +24,6 @@
         v-for="item in nextFive"
         :key="item.longTitle"
         color="primary lighten-2"
-        
       >
       <span slot="opposite">
         <div class="title">
@@ -30,7 +34,7 @@
         </div>
       </span>
         <v-card class="elevation-2">
-          <v-card-title class="itemTitle primary--text"> {{item.longTitle}} </v-card-title>
+          <v-card-title class="itemTitle secondary--text"> {{item.longTitle}} </v-card-title>
         </v-card>
       </v-timeline-item>
     </v-timeline>
@@ -79,6 +83,13 @@ export default {
         weekday: "short",
         month: "long"
       });
+    },
+    currentItem() {
+      const currentTime = Date.now();
+      const item = Object.values(this.items).filter(
+        i => currentTime < i.dateEnd && currentTime > i.dateStart
+      );
+      return item.length ? item[0].longTitle : null;
     }
   },
   methods: {
@@ -105,7 +116,6 @@ export default {
 <style scoped>
 .itemTitle {
   font-weight: 600;
-  /* color: rgba(80, 0, 0, 0); */
 }
 
 .timelineContainer {

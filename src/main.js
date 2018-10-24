@@ -17,7 +17,7 @@ import Vuetify from "vuetify";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-import "./registerServiceWorker";
+import updateAvailable from "./registerServiceWorker";
 
 const messaging = firebase.messaging();
 messaging.onMessage(function(payload) {
@@ -30,6 +30,21 @@ firebase.auth().onAuthStateChanged(user => {
   store.commit("setUser", user);
   if (user) {
     store.dispatch("dispatchAllActions");
+  }
+});
+
+updateAvailable.then(code => {
+  if (code == "updated") {
+    store.dispatch("showSnackbar", {
+      text:
+        "🎉🎈Update disponibil. Reîncărcați aplicația pentru a descărca ultima versiune.🎈🎉",
+      timeout: 0
+    });
+  } else if (code == "offline") {
+    store.dispatch("showSnackbar", {
+      text: "Sunteți offline. Unele funcționalități nu vor merge.😟",
+      timeout: 0
+    });
   }
 });
 

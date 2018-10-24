@@ -1,13 +1,13 @@
 <template>
   <v-content>
     <navigation-bar/>
-    <transition name="fade">
-        <router-view v-touch="{
-         right: navigateBack,
-         left: navigateForward
-       }"/>
+    <transition name="fade" mode="out-in" appear>
+      <router-view v-touch="{
+        right: navigateBack,
+        left: navigateForward
+      }"/>
     </transition>
-    <v-snackbar :timeout="this.$store.state.snackTimeout" v-model="snackbar">
+    <v-snackbar :timeout="this.$store.state.snackTimeout" v-model="snackbar" multi-line>
       {{ snackText }}
       <v-btn flat color="primary" @click.native="closeSnack">Închide</v-btn>
     </v-snackbar>
@@ -34,22 +34,23 @@ export default {
       this.$store.commit("setSnack", { text: "", value: false });
     },
     navigateBack() {
-      this.$router.go(-1);
+      this.$router.back();
     },
     navigateForward() {
-      this.$router.go(1);
+      this.$router.forward();
     }
   }
 };
 </script>
 
 <style scoped>
-.fade-enter,
+/* .fade-enter, */
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.35s;
+  transition: all 0.2s ease;
 }
-.fade-leave-active /* .fade-leave-active below version 2.1.8 */ {
+.fade-enter,
+.fade-leave-active {
   opacity: 0;
 }
 </style>

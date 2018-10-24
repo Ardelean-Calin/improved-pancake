@@ -84,10 +84,10 @@ export default {
         rating: this.selectedIcon + 1,
         comment: this.comment
       });
-      this.$store.dispatch(
-        "showSnackbar",
-        "Mulțumim pentru timpul acordat! 😃"
-      );
+      this.$store.dispatch("showSnackbar", {
+        text: "Mulțumim pentru timpul acordat! 😃",
+        timeout: 6000
+      });
       this.$router.back();
     }
   }

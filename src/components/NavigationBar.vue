@@ -7,7 +7,7 @@
     >
       <div class="mainContent primary white--text">
         <template v-if="loggedIn">
-          <v-list-tile-avatar color="white">
+          <v-list-tile-avatar>
             <img :src="photoURL">
           </v-list-tile-avatar>
           
