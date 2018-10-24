@@ -1,0 +1,81 @@
+{
+  "TTDTV": {
+    "titlu": "Tehnici și tehnologii avansate de dezvoltare, testare și validare a componentelor electrice și electronice",
+    "imagine": "https://upload.wikimedia.org/wikipedia/commons/7/75/MakerBot_ThingOMatic_Bre_Pettis.jpg",
+    "descriere": "",
+    "curs": {
+      "startDate": "2018-10-01T18:00:00Z",
+      "period": 1,
+      "duration": 2,
+      "count": 14
+    },
+    "seminar": {
+      "startDate": "2018-10-01T20:00:00Z",
+      "period": 2,
+      "duration": 2,
+      "count": 7
+    }
+  },
+  "MSTEP": {
+    "titlu": " Modelare, simulare și testare în electronică de putere și sisteme de acționări electrice",
+    "imagine": "https://i.imgur.com/E9RFcNSh.jpg",
+    "descriere": "",
+    "curs": {
+      "startDate": "2018-10-03T14:00:00Z",
+      "period": 1,
+      "duration": 2,
+      "count": 14
+    },
+    "laborator": {
+      "startDate": "2018-10-03T16:00:00Z",
+      "period": 2,
+      "duration": 2,
+      "count": 7
+    }
+  },
+  "MP": {
+    "titlu": "Managementul Proiectelor",
+    "imagine": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/VFPt_Solenoid_correct2.svg/490px-VFPt_Solenoid_correct2.svg.png",
+    "descriere": "",
+    "curs": {
+      "startDate": "2018-10-03T18:00:00Z",
+      "period": 1,
+      "duration": 2,
+      "count": 14
+    },
+    "laborator": {
+      "startDate": "2018-10-05T14:00:00Z",
+      "period": 1,
+      "duration": 2,
+      "count": 14
+    }
+  },
+  "MdCsDP": {
+    "titlu": "Metodologii de concepție și dezvoltare a produselor",
+    "imagine": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Archimedes_pi.svg/750px-Archimedes_pi.svg.png",
+    "descriere": "",
+    "curs": {
+      "startDate": "2018-10-04T17:00:00Z",
+      "period": 1,
+      "duration": 2,
+      "count": 14
+    },
+    "laborator": {
+      "startDate": "2018-10-04T15:00:00Z",
+      "period": 1,
+      "duration": 2,
+      "count": 14
+    }
+  },
+  "ACP": {
+    "titlu": "Activitate de cercetare",
+    "imagine": "https://upload.wikimedia.org/wikipedia/commons/4/49/%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg",
+    "descriere": "",
+    "laborator": {
+      "startDate": "2018-10-05T08:00:00Z",
+      "period": 1,
+      "duration": 3,
+      "count": 14
+    }
+  }
+}
